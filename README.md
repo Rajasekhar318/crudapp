@@ -23,7 +23,7 @@ npm start
 
 This will initialize a new React project using Create React App and start the development server.
 
-### Adding Dependencies
+**### Adding Dependencies**
 Install react-router-dom to handle routing in your application:
 npm i react-router-dom
 
