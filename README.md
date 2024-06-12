@@ -50,16 +50,28 @@ The starting page is the Registration Page, where new users can register by prov
 
 ## Login Page
 After registration, users are directed to the Login Page. Here, you can log in with your username and password credentials.
+![Screenshot (184)](https://github.com/Rajasekhar318/crudapp/assets/153741821/192611ff-616a-4938-9d0c-3988150cceb2)
+
 
 ## Landing Page
 Upon successful login, you will be redirected to the Landing Page. This page features an array of items displayed in a list format, offering the following functionalities:
 - **Add Item:** Introduce new items to the list.
 - **Delete Item:** Remove items from the list.
 - **Modify Item:** Edit the details of existing items.
+![Screenshot (185)](https://github.com/Rajasekhar318/crudapp/assets/153741821/ce77b872-1d05-4290-a54e-f82b5fc46e87)
+![Screenshot (186)](https://github.com/Rajasekhar318/crudapp/assets/153741821/7adea1cc-c94f-4b09-9719-24de761b1906)
+![Screenshot (187)](https://github.com/Rajasekhar318/crudapp/assets/153741821/95c1622a-b38f-457b-826d-900f136edd0d)
+![Screenshot (188)](https://github.com/Rajasekhar318/crudapp/assets/153741821/6f9ebb5c-e1b2-47b2-a59b-4968f06b53d7)
+
+
 
 ## Filtering and Sorting
 Enhance your view by applying filters and sorting mechanisms:
 
 - **Filter:**  Narrow down the list by name or category.
 - **Sort:** Organize the list in ascending or descending order by name, category, or date.
+![Screenshot (189)](https://github.com/Rajasekhar318/crudapp/assets/153741821/ce07bac8-01ab-434c-a630-2184773578b6)
+![Screenshot (190)](https://github.com/Rajasekhar318/crudapp/assets/153741821/d0491366-cc0c-4fd1-b200-a0c90c0966d1)
+![Screenshot (191)](https://github.com/Rajasekhar318/crudapp/assets/153741821/1ec651ec-4cb2-4856-9eda-6f9123ab5880)
+
 
