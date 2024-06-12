@@ -1,0 +1,96 @@
+/* RegistrationPage.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height to cover the full view height */
+  padding: 0 1rem; /* Add horizontal padding to prevent content from touching the edges */
+  background-color: #f7f7f7;
+}
+
+.form {
+  background: #ffffff;
+  padding: 2rem; /* Start with a reasonable padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Set a max-width for larger screens */
+  width: 100%; /* Make the form width responsive */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  margin: 0 auto; /* Center the form in the available horizontal space */
+}
+
+.input-field {
+  margin-bottom: 1rem;
+  width: calc(100% - 2rem); /* Subtract padding from the total width */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.input-field input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #004494;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form {
+    padding: 1rem;
+  }
+  .input-field {
+    width: calc(100% - 2rem); /* Adjust width based on the new padding */
+  }
+
+
+  .input-field input {
+    padding: 0.6rem;
+  }
+
+  .button {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 0.5rem;
+  }
+  .input-field {
+    width: calc(100% - 1rem); /* Adjust width based on the new padding */
+  }
+
+  .input-field input {
+    padding: 0.4rem;
+  }
+
+  .button {
+    padding: 0.6rem;
+  }
+}
