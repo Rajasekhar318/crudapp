@@ -65,7 +65,7 @@
     padding: 1rem;
   }
   .input-field {
-    width: calc(100% - 2rem); /* Adjust width based on the new padding */
+    width: calc(100% - 2rem); /* Adjust width based on the padding */
   }
 
   .input-field input {
@@ -82,7 +82,7 @@
     padding: 0.5rem;
   }
   .input-field {
-    width: calc(100% - 1rem); /* Adjust width based on the new padding */
+    width: calc(100% - 1rem); /* Adjust width based on the padding */
   }
 
   .input-field input {
