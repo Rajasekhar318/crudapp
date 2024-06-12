@@ -1,6 +1,6 @@
 # My-App
 
-Welcome to My-App, a React-based application designed to provide a seamless registration and login experience, followed by a dynamic item management system.
+Welcome to My-App, a React-based application designed to provide a user-friendly seamless registration and login experience, followed by a dynamic item management system.
 
 ## Getting Started
 
