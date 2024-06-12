@@ -45,6 +45,9 @@ By default, the app opens at localhost:3000. If this port is already in use, the
 ## Registration Page
 The starting page is the Registration Page, where new users can register by providing a username, email, and password. If the username is already taken, the system will prompt you to choose a different one.
 
+![Screenshot (182)](https://github.com/Rajasekhar318/crudapp/assets/153741821/f223886f-8512-4eaf-9414-e1ae2a9c6abe)
+
+
 ## Login Page
 After registration, users are directed to the Login Page. Here, you can log in with your username and password credentials.
 
