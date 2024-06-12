@@ -2,22 +2,30 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 
+// HomePage component definition
 const HomePage = () => {
+  // Hook for navigation
   const navigate = useNavigate();
-  // Retrieve the logged-in user's unique identifier
+  // State for storing the logged-in user's identifier
   const loggedInUser = localStorage.getItem('loggedInUser');
-  
+  // State for storing items specific to the logged-in user
   const [items, setItems] = useState(() => {
-    // Retrieve items specific to the logged-in user
+    
     const savedItems = localStorage.getItem(`items_${loggedInUser}`);
     return savedItems ? JSON.parse(savedItems) : [];
   });
   
+  // State for managing the new item input fields
   const [newItem, setNewItem] = useState({ id: '', name: '', category: '', date: '' });
+  // State to track if the user is editing an existing item
   const [editing, setEditing] = useState(false);
+  // State for search term input by the user
   const [searchTerm, setSearchTerm] = useState('');
+  // State for selected category to filter items
   const [filterCategory, setFilterCategory] = useState('');
+  // State for selected field to sort items
   const [sortField, setSortField] = useState('name');
+  // State for selected order to sort items
   const [sortOrder, setSortOrder] = useState('asc');
 
   useEffect(() => {
@@ -25,44 +33,53 @@ const HomePage = () => {
     localStorage.setItem(`items_${loggedInUser}`, JSON.stringify(items));
   }, [items, loggedInUser]);
 
+  // Effect hook to save items to localStorage when items or loggedInUser changes
   useEffect(() => {
     if (!localStorage.getItem('isLoggedIn')) {
       navigate('/login');
     }
   }, [navigate]);
 
+  // Handler for input change events
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewItem({ ...newItem, [name]: value });
   };
 
+  // Handler for form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editing) {
+      // Update the item if editing
       setItems(items.map(item => (item.id === newItem.id ? newItem : item)));
     } else {
+      // Add a new item if not editing
       setItems([...items, { ...newItem, id: Date.now() }]);
     }
+    // Reset newItem state and exit editing mode
     setNewItem({ id: '', name: '', category: '', date: '' });
     setEditing(false);
   };
 
+  // Handler for edit button click
   const handleEdit = (item) => {
     setNewItem(item);
     setEditing(true);
   };
 
+  // Handler for delete button click
   const handleDelete = (itemId) => {
     setItems(items.filter(item => item.id !== itemId));
   };
 
+  // Handler for logout button click
   const handleLogout = () => {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('loggedInUser');
     navigate('/login');
   };
 
-  // Get unique categories for the dropdown
+  // Compute unique categories for filtering dropdown
   const categories = Array.from(new Set(items.map(item => item.category)));
 
   const getFilteredAndSortedItems = () => {
@@ -78,8 +95,10 @@ const HomePage = () => {
       });
   };
 
+  // Get the filtered and sorted items for rendering
   const filteredAndSortedItems = getFilteredAndSortedItems();
 
+  // Render the HomePage component
   return (
     <div className="container">
       <header className="header">
